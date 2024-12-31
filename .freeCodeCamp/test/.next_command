@@ -95,3 +95,7 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 touch salon.sh
 chmod +x salon.sh
+pg_dump -cC --inserts -U freecodecamp salon > salon.sql
+git remote -v
+git remote set-url origin https://github.com/stevenyu253436/learn-salon-appointment-scheduler.git
+git add .
